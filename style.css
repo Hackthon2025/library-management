@@ -8,7 +8,6 @@
     &::-webkit-scrollbar {
         display: none;
     }
-    
     table{
         background: rgba(256,256,256,.75);
         border-radius: 7.5px;
@@ -22,9 +21,7 @@
         
     }
 }
-.row_mt-4{
-    color: black;
-}
+
 #insertion_section{
     background: rgba(0,0,0,.75);
     border-radius: 7.5px;
