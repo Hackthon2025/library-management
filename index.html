@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Free Library System">
+    <meta name="keywords" content="Library System, Book System">
+    <meta name="author" content="Codeblogger">
+    <title>Library System</title>
+
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- JQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- FontAwesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <!-- Pages -->
+<link rel="stylesheet" href="/CSS/main.css">
+<link rel="stylesheet" href="/CSS/book_list.css">
+    <link rel="stylesheet" href="/CSS/insertion_section.css">
+    <script src="/JS/main.js"></script>
+</head>
+<body>
+  <section id="one-page">
+   <div class="container">
+            
+     <!-- Title -->
+<div class="row">
+   <h1 class="text-light" style="color: black;">LIBRARY MANAGMENT SYSTEM </h1>
+            </div>
+
+ <div class="row mt-4">
+  
+              <!-- insertion section -->
+  <div class="col-lg-5" id="insertion_section">
+   <form class="form-group justify-content-center">
+ <div class="row" id="name-section">
+<label for="bookName" class="text-light">NAME OF BOOK</label>
+<input type="url" class="form-control" id="bookName">
+  </div>
+   <div class="row" id="author-section">
+<label for="authorName" class="text-light">LITTERATEUR</label>
+ <input type="text" class="form-control" id="authorName">
+     </div>
+  <div class="row" id="publisher-section">
+    <label for="publisherName" class="text-light">PUBLISHER</label>
+  <input type="text" class="form-control" id="publisherName">
+    </div>
+    <div class="row" id="two-section">
+       <div class="col-6">
+ <label for="numberPage" class="text-light">FOLIOS </label>
+   <input type="number" class="form-control" id="numberPage">
+       </div>
+        <div class="col-6">
+ <label for="serialNumber" class="text-light">SERIAL NUMBER</label>
+ <input type="number" class="form-control" id="serialNumber">
+   </div>
+     </div>
+                        
+ <div class="add-button mt-4">
+<button type="button" class="btn btn-danger btn-block" id="add" >ADD</button>
+   </div>
+     <div class="add-button mt-4">
+       <a href="https://archive.org/details/inlibrary?tab=collection&query="><button type="button" class="btn btn-danger btn-block" id="add" >Search</button></a>
+   </div>
+     
+              </form>
+                </div>
+
+    <!-- Book List -->
+   <div class="col-lg-7" id="book_list">
+ <table class="table table-borderless table-striped mt-3 ">
+ <thead>
+   <tr>
+    <th scope="col">Book Name</th>
+    <th scope="col">Litterateur</th>
+    <th scope="col">Publisher</th>
+    <th scope="col">Folios</th>
+    <th scope="col">Serial</th>
+    <th></th>
+    </tr>
+   </thead>
+  <tbody id="tabs">
+   <tr class="tab">
+     <th scope="row"><image src="https://readingraphics.com/wp-content/uploads/2019/09/Atomic-Habits_Book.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/atomic-habits/page/n1/mode/2up">Atomic Habits</th></a>
+      <td>James Clear</td>
+       <td>Penguin Random House</td>
+       <td>285</td>
+       <td>1</td>
+       <td>
+      <button type="button" class="close" aria-label="Close">
+     <span aria-hidden="true">X</span>
+       </button>
+      </td>
+    </tr>
+    <tr class="tab">
+      <th scope="row"><image src="https://i.thenile.io/r1000/9781594133558.jpg?r=5fdf423270e45" style="width:100px; height:150px"><br><a href="https://archive.org/details/harrypotterdeath0000rowl_n2u6">Harry Potter and the Deathly Hallows</th></a>
+     <td>J.K. Rowling</td>
+     <td>Sholastic Inc.</td>
+     <td>788</td>
+      <td>2</td>
+      <td>
+     <button type="button" class="close" aria-label="Close">
+ <span aria-hidden="true">X</span>
+     </button>
+     </td>
+    </tr>
+    <tr class="tab">
+      <th scope="row"><image src="https://imgv2-1-f.scribdassets.com/img/word_document/376526467/original/7c5e4db12b/1586408071?v=1" style="width:100px; height:150px"><br><a href="https://archive.org/details/rich-dad-poor-dad-by-robert-t.-kiyosaki">Rich Dad Poor Dad</th></a>
+     <td>Robert T. Kiyosaki  </td>
+     <td>Plata Publishing , LLC</td>
+     <td>338 </td>
+     <td>3</td>
+     <td>
+     <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">X</span>
+     </button>
+     </td>
+   </tr>
+   <tr class="tab">
+     <th scope="row"><image src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781471134746/pride-and-prejudice-9781471134746_hr.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/austen-pride-and-prejudice/page/n1/mode/2up">Pride and Prejudice</th></a>
+   <td>Jane Austen</td>
+   <td>Sky</td>
+   <td>424</td>
+   <td>4</td>
+   <td>
+    <button type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">X</span>
+    </button>
+   </td>
+  </tr>
+  <tr class="tab">
+   <th scope="row"><image src="http://www.betterreading.com.au/wp-content/uploads/2014/09/isbn9780748112517.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/twilight-pdf/1.%20-%20Twilight/page/n1/mode/2up">Twilight</th></a>
+   <td>Stephenie Meyer</td>
+   <td>Little, Brown and Company <br>Time Warner Book Group</td>
+   <td>260</td>
+   <td>5</td>
+   <td>
+   <button type="button" class="close" aria-label="Close">
+   <span aria-hidden="true">X</span>
+   </button>
+   </td>
+  </tr>
+  <tr class="tab">
+    <th scope="row"><image src="https://images.thalia.media/07/-/c9115952d4774fea8dacae48fdd1db5f/king-of-wrath-taschenbuch-ana-huang.jpeg" style="width:100px; height:150px"><br><a href="https://archive.org/details/king-of-wrath-1-ana-huang_202311">King Of Wrath</th></a>
+   <td>Ana Huang</td>
+   <td>Piatkus</td>
+   <td>455</td>
+   <td>6</td>
+   <td>
+   <button type="button" class="close" aria-label="Close">
+   <span aria-hidden="true">X</span>
+   </button>
+   </td>
+   </tr>
+   <tr class="tab">
+     <th scope="row"><image src="https://www.sloww.co/wp-content/uploads/2020/12/Psychology-of-Money-Book.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/the-psychology-of-money-morgan-housel">The Psychology of Money</th></a>
+    <td>Morgan Housel</td>
+    <td>Harriman House</td>
+    <td>242</td>
+    <td>7</td>
+    <td>
+    <button type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">X</span>
+    </button>
+    </td>
+   </tr>
+   <tr class="tab">
+     <th scope="row"><image src="http://prodimage.images-bn.com/pimages/9780547928210_p0_v2_s1200x630.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/tolkien-j.-the-lord-of-the-rings-harper-collins-ebooks-2010/page/n1/mode/2up">The Lord of the Rings</th></a>
+     <td>John Ronald Reuel Tolkien</td>
+     <td> HarperCollins e-books</td>
+     <td>1210</td>
+     <td>8</td>
+     <td>
+     <button type="button" class="close" aria-label="Close">
+     <span aria-hidden="true">X</span>
+     </button>
+     </td>
+     </tr>
+     <tr class="tab">
+       <th scope="row"><image src="https://cdn.kobo.com/book-images/2af22cca-0e50-42c4-8f3a-de9f69053a48/1200/1200/False/anna-karenina-movie-tie-in-edition.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/annakareninatols00tolsiala">Anna Karenina</th></a>
+       <td>Leo Tolstoy </td>
+       <td>New York : T.Y. Crowell</td>
+       <td>1084</td>
+       <td>9</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+      <tr class="tab">
+        <th scope="row"><image src="https://cdn.kobo.com/book-images/5967e7fb-edc8-403b-9989-f8aab7b3ed89/1200/1200/False/the-alchemist-38.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/PauloCoelhoTheAlchemist/mode/2up">The Alchemist</th></a>
+       <td>Paulo Coelho</td>
+       <td>Omega</td>
+       <td>89</td>
+       <td>10</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+       </tr>
+       <tr class="tab">
+         <th scope="row"><image src="https://positive.b-cdn.net/wp-content/uploads/2020/12/Ikigai-1-212x300.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/ikigai-the-japanese-secret-to-a-long-and-happy-life-by-hector-garcia-and-francesc-miralles-2016-2003/mode/2up">Ikigai Journey</th></a>
+       <td> Francesc Miralles Hector Garcia </td>
+       <td>Penguin Books</td>
+       <td>131</td>
+       <td>11</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+     </tr>
+     <tr class="tab">
+       <th scope="row"><image src="https://cdn01.sapnaonline.com/product_media/9788172345662/md_9788172345662.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/joseph-murphy-revised-by-ian-mc-mahan-the-power-of-your-subconscious-mind-bantam-2001-z-lib.io/mode/2up">The Power of your Subconscious Mind</th></a>
+      <td> Joseph Murphy</td>
+      <td>Bantam Books</td>
+      <td>247</td>
+      <td>12</td>
+      <td>
+      <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">X</span>
+      </button>
+      </td>
+     </tr>
+     <tr class="tab">
+       <th scope="row"><image src="http://jeffreycscott.com/wp-content/uploads/2018/04/The-Diary-of-Anne-Frank-Cover-676x1014.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/diaryofyounggir000fran">The Diary of a Young Girl</th></a>
+       <td>Anne Frank</td>
+       <td>Bantam Books</td>
+       <td>364</td>
+       <td>13</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+    <tr class="tab">
+       <th scope="row"><image src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Hunger_Games_cover.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/book-1-the-hunger-games_202311">The Hunger Games</th></a>
+       <td>Suzanne Collins</td>
+       <td>Scholastic Inc.</td>
+       <td>358</td>
+       <td>14</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+    <tr class="tab">
+       <th scope="row"><image src="https://upload.wikimedia.org/wikipedia/en/d/dd/Fourth_Wing_Cover_Art.jpeg" style="width:100px; height:150px"><br><a href="https://archive.org/details/fourth-wing-the-empyrean-book-01/Fourth%20Wing%20%28The%20Empyrean%20Book%2001%29/">Fourth Wing</th></a>
+       <td>Rebecca Yarros</td>
+       <td>Red Tower Books (Entangled Publishing)</td>
+       <td>481</td>
+       <td>15</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+     <tr class="tab">
+       <th scope="row"><image src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781398529489/powerless-9781398529489_xlg.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/powerless-lauren-roberts-english-2023-z-library">Powerless</th></a>
+       <td>Lauren Roberts</td>
+       <td>Simon & Schuster</td>
+       <td>485</td>
+       <td>16</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+    <tr class="tab">
+       <th scope="row"><image src="https://upload.wikimedia.org/wikipedia/en/d/d8/Red_Queen_book_cover.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/red-queen-by-victoria-aveyard">Red Queen</th></a>
+       <td>Victoria Aveyard</td>
+       <td>HarperTeen</td>
+       <td>1070</td>
+       <td>17</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+     <tr class="tab">
+       <th scope="row"><image src="https://upload.wikimedia.org/wikipedia/en/6/6a/Shatter_Me.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/shatterme0000mafi">Shatter Me</th></a>
+       <td>Tahereh Mafi</td>
+       <td>HarperCollins Publishers</td>
+       <td>468</td>
+       <td>18</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+    <tr class="tab">
+       <th scope="row"><image src="https://prodimage.images-bn.com/pimages/9780316571579_p0_v8_s600x595.jpg" style="width:100px; height:150px"><br><a href="https://archive.org/details/the-inheritance-games-by-jennifer-lynn-barnes_theinheritancegamesbyjenniferlynnbarnes/page/n1/mode/2up">The Inheritance Game</th></a>
+       <td>Jennifer Lynn Barnes</td>
+       <td> Little, Brown Books for Young Readers</td>
+       <td>320</td>
+       <td>19</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+     <tr class="tab">
+       <th scope="row"><image src="https://archive.org/services/img/ancientguardians0000morg_o7w5" style="width:100px; height:150px"><br><a href="https://archive.org/details/ancientguardians0000morg_o7w5/mode/2up">Ancient Guardians Book III </th></a>
+       <td>S.L. Morgan</td>
+       <td> Pasidian Press</td>
+       <td>572</td>
+       <td>20</td>
+       <td>
+       <button type="button" class="close" aria-label="Close">
+       <span aria-hidden="true">X</span>
+       </button>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    </div>
+   </div>
+  </div> 
+ </section>
+ </body>
